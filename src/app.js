@@ -5,23 +5,22 @@ const bodyParser = require("body-parser");
 const createError = require("http-errors");
 const xssClean = require("xss-clean"); 
 const rateLimit = require("express-rate-limit");
+const userRouter = require("./routers/userRouter");
 
 //Middlewares
 app.use(morgan("dev"));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
-
 //Prevent XSS Attacks
 app.use(xssClean());
-
 //Limit Request from API
-app.use(rateLimiter);
 const rateLimiter = rateLimit({
   max: 5,
   windowMs: 1 * 60 * 1000, //1 Minutes
   message: "Too many request from this IP, please try again later.",
 });
-
+app.use(rateLimiter);
+app.use("/api/users",userRouter)
 
 //Routes
 app.get("/test", (req, res) => {
