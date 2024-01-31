@@ -1,0 +1,21 @@
+{
+  "name": "e-commerce",
+  "version": "1.0.0",
+  "description": "E-commerce website using nodejs, expressjs, mongodb, Vuejs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "e-commerce",
+    "nodejs",
+    "expressjs",
+    "mongodb",
+    "Vuejs"
+  ],
+  "author": "abdulbasetbappy",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
