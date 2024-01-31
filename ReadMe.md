@@ -8,3 +8,4 @@
 6.Middleware & Types of Middleware.
 7.Express Error Handling Middleware.
 8.Handle HTTP Error.
+9.Api Secure Middleware
