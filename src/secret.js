@@ -1,11 +1,11 @@
 require('dotenv').config();
 
-const PORT = process.env.SERVER_PORT || 8000;
+const serverPort = process.env.SERVER_PORT || 8000;
+const mongoDB= process.env.MONGODB_URI || 'mongodb://localhost:27017/e-commerce';
 
 
 
 
 
 
-
-module.exports = {PORT};
+module.exports = {serverPort, mongoDB};
