@@ -13,3 +13,4 @@
 11.Setup MVC Architecture.
 12.Connect to Database.
 13.Create Users Schema and Models.
+14.Create Seed For Testing.

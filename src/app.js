@@ -6,6 +6,8 @@ const createError = require("http-errors");
 const xssClean = require("xss-clean"); 
 const rateLimit = require("express-rate-limit");
 const userRouter = require("./routers/userRouter");
+const seedRouter = require("./routers/seedRouter");
+
 
 //Middlewares
 app.use(morgan("dev"));
@@ -20,7 +22,8 @@ const rateLimiter = rateLimit({
   message: "Too many request from this IP, please try again later.",
 });
 app.use(rateLimiter);
-app.use("/api/users",userRouter)
+app.use("/api/users",userRouter);
+app.use("/api/seed",seedRouter);
 
 //Routes
 app.get("/test", (req, res) => {
