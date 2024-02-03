@@ -11,3 +11,5 @@
 9.Api Secure Middleware.
 10.Environment Variables.
 11.Setup MVC Architecture.
+12.Connect to Database.
+13.Create Users Schema and Models.
